@@ -129,8 +129,8 @@
         @endif
 
         {{-- Create Leave Request Modal --}}
-        <div x-show="showCreateModal" style={'background-color:"red"'} class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div @click.away="showCreateModal = false" class="bg-white rounded-lg p-6 w-full max-w-md shadow-xl">
+        <div x-show="showCreateModal" style="background-color: rgba(0, 0, 0, 0.315);" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div @click.away="showCreateModal = false" style="width: 50%" class="bg-white rounded-lg p-6 max-w-md shadow-xl">
                 <h2 class="text-xl font-bold mb-4">บันทึกรายการขอลาหยุด</h2>
                 <form method="POST" action="{{ route('leave_requests.store') }}">
                     @csrf

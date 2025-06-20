@@ -79,18 +79,11 @@
                             </label>
                         </div>
 
-                        {{-- Input สำหรับปรับความเร็ว Auto Play --}}
-                        <div class="form-control">
-                            <label class="label cursor-pointer gap-2">
-                                <span class="label-text">ความเร็ว Auto Play (ms):</span>
-                                <input type="number" class="input input-bordered w-32"
-                                    x-model.number="autoplayInterval" min="500" max="10000" step="100" />
-                            </label>
-                        </div>
+                        {{-- Input สำหรับปรับความเร็ว Auto Play --}
 
                         {{-- Dropdown สำหรับเลือกจำนวนคอลัมภ์ --}}
                         <div class="dropdown dropdown-hover">
-                            <div tabindex="0" role="button" class="btn btn-neutral m-1">คอลัมภ์: <span
+                            <div tabindex="0" role="button" class="btn btn-neutral">คอลัมภ์: <span
                                     x-text="columns"></span></div>
                             <ul tabindex="0" class="dropdown-content flex z-[1] menu p-2 bg-base-100  w-52">
                                 <li class="p-2 " style="background-color: rgb(127, 214, 255); border-radius: 50px"><a
@@ -104,12 +97,11 @@
                     </div>
 
                     {{-- Debug/สถานะ Alpine.js (เพื่อยืนยันว่า Alpine.js ทำงาน) --}}
-                    <div class="text-sm text-gray-500 text-center mb-4">
+                    <div class="bg-red-800 text-sm text-gray-500 text-center mb-4">
                         สถานะ Alpine.js:
                         <span class="font-bold">Auto Play: <span
                                 x-text="autoplayEnabled ? 'เปิด' : 'ปิด'"></span></span> |
                         <span class="font-bold">คอลัมภ์: <span x-text="columns"></span></span> |
-                        <span class="font-bold">ความเร็ว: <span x-text="autoplayInterval"></span> ms</span> |
                         <span class="font-bold">หน้าปัจจุบัน: <span x-text="currentPage + 1"></span></span>
                     </div>
                     <div class="flex justify-center w-full py-2 gap-2 mt-4">
